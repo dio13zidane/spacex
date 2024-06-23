@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+     var nama_lengkap = "";
+     while (true) {
+        nama_lengkap = prompt("Masukkan nama lengkap:");
+        if (!isNaN(nama_lengkap)) {
+            alert("Nama karyawan tidak boleh berupa angka dan karakter apapun!!.Silahkan masukkan kembali.");
+        } else {
+            break;
+        }
+   }
+
+var jk = prompt("Jenis kelamin(laki-laki/perempuan):").toLowerCase();
+var tinggi_badan = parseInt(prompt("Tinggi badan (dalam cm):"));
+var berat_badan = parseInt(prompt("Berat badan (dalam kg):"));
+var ipk = parseFloat(prompt("IPK:"));
+var pendidikan = prompt("Pendidikan (D3/S1):").toUpperCase();
+
+if ((jk === "laki-laki" && tinggi_badan >= 170 && tinggi_badan <= 179 && berat_badan === tinggi_badan - 110 && ipk >= 3 && ipk <= 4 && (pendidikan === "D3" || pendidikan === "S1")) ||
+    (jk === "perempuan" && tinggi_badan >= 160 && tinggi_badan <= 170 && berat_badan === tinggi_badan - 110 && ipk >= 3 && ipk <= 4 && (pendidikan === "D3" || pendidikan === "S1"))) {
+        document.write('<div class="pegawai-container">');
+        document.write("<h3>Selamat anda semenuhi syarat sebag ai penerimaan pegawai.</h3> <br>");
+} else {
+    document.write("<h3>Maaf, Anda tidak memenuhi syarat untuk penerimaan pegawai.</h3> <br>");
+}
+
+document.write("Nama Lengkap: " + nama_lengkap + "<br>");
+
+document.write("Jenis Kelamin: " + jk + "<br>");
+
+document.write("Tinggi Badan: " + tinggi_badan + "<br>");
+
+document.write("Berat Badan: " + berat_badan + "<br>");
+
+document.write("IPK: " + ipk + "<br>");
+
+document.write("Pendidikan: " + ipk + "<br>");
+
+//toLowerCase untuk jika penulisan huruf besar atau ada yang huruf besar seperti Laki-Laki / Perempuan maka dia otomatis menjadi huruf kecil//
+//toUpperCase kebalikan dari toLowerCase = huruf kecil akan jadi huruf besar semua misal s1 menjadi S1
+//tanda && = dan     
+    </script>
+</body>
+</html>

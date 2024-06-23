@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Space Club-about</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+            margin: 0; /* Remove default margin */
+        }
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(17, 35, 105, 0.7), rgba(4, 9, 30, 0.7)), url(image/backgroundprofil.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            width: 100%;
+            height: 60vh;
+            
+        }
+
+       
+
+        .product .product-card {
+            z-index: 1;
+            background: #1D212B;
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 40px;
+            border-radius: 15px;
+            margin-top: 300px;
+        }
+
+        .product .product-card:hover{
+            transform: scale(1.2);
+            transition: .5s ease-in-out;
+        }
+
+
+        .product .product-card:before {
+            content: '';
+            background: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .product .product-card .product-img {
+            z-index: 1;
+            position: absolute;
+            max-width: 270px;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .product .product-card .name {
+            z-index: 2;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 110px;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .product .product-card .npm {
+            z-index: 2;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 80px;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+        }
+
+        .product .product-card .popup-btn {
+            z-index: 2;
+            color: #fff;
+            background: #555;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .product .product-card .popup-btn:hover{
+            background-color: rgb(91, 2, 26);
+        }
+
+        .product .popup-view {
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+
+        }
+
+        .product .popup-view.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product .popup-view.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product .popup-card {
+            position: relative;
+            display: flex;
+            width: 700px;
+            height: 400px;
+            margin: 20px;
+
+        }
+
+        .product .popup-card .close-btn.active {
+            z-index: 4;
+        }
+
+
+        .product .popup-card .product-img {
+            z-index: 2;
+            background: #1D212B;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
+            height: 90%;
+            transform: translateY(25px);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+
+        .product .popup-card .product-img img {
+            z-index: 2;
+            position: relative;
+            width: 300px;
+            left: -30px;
+        }
+
+        .product .popup-card .info {
+    z-index: 2;
+    background-color: #fff;
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    position: relative;
+    clip-path: polygon(10% 0,    100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+    border-radius: 10px; /* Match the border radius of the box */
+    margin-top: -13px;
+}
+
+.product .popup-card .info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff0000, #3f65ff); /* Adjust the gradient or color as needed */
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+    z-index: -1;
+    border-radius: 10px; /* Match the border radius of the box */
+}
+
+
+
+        .product .popup-card .info .icon a {
+            color: rgb(9, 6, 75);
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .product .popup-card .close-btn {
+            color: #555;
+            z-index: 3;
+            position: absolute;
+            right: 0;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .icon a #whatsapp:hover{
+            transform: scale(1.3);
+            transition: .4s;
+        }
+
+        .wrapper{
+        margin-top: 10px;
+        margin-left: 0;
+        background-color: #746007a9;
+        width:90%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .wrapper .icon:hover span i {
+  color: #fff; /* Ubah warna ikon menjadi putih saat tombol dihover */
+}
+
+ .wrapper .icon{
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 500px;
+  margin: 10px;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 22px;
+  display: inline-block;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #333;
+  text-decoration: none;
+}
+
+.icon:hover{
+    color: #fff;
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-left: 25%;
+}
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-left: -20px;
+}
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background-color: #47fc00;
+  color: #ffffff;
+}
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+.wrapper .telegram:hover,
+.wrapper .telegram:hover .tooltip,
+.wrapper .telegram:hover .tooltip::before {
+  background-color: #0088cc;
+  color: #ffffff;
+}
+.wrapper .blogger:hover,
+.wrapper .blogger:hover .tooltip,
+.wrapper .blogger:hover .tooltip::before {
+  background-color: #ff7307;
+  color: #ffffff;
+}
+
+.info p{
+    margin-top: -20px;
+}
+
+        
+    </style>
+
+
+</head>
+
+<body>
+  
+
+    <section class="header">
+
+
+        <div class="container">
+            <div class="product">
+                <div class="product-card">
+                    <h2 class="name">Dio Abiyyu Zidane Ginting</h2>
+                    <span class="npm">23451039</span>
+                    <a class="popup-btn">View Detail</a>
+                    <img src="image/dioprofil.png" class="product-img" alt="">
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <a><i class="fas fa-times close-btn"></i></a>
+                        <div class="product-img">
+                            <img src="image/dioprofil.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h2>Dio Abiyyu Zidane Ginting</h2>
+                            <h3>23451039 - Teknik Informatika (A) </h3><br><br>
+                            <p>"Life is like a game.<br>Sometimes you lose, sometimes you win.<br>So don't give
+                                up.<br>Fighting!"</p><br>
+                            <div class="icon">
+                                        <div class="wrapper">
+                                            <a target="_blank" href="https://api.whatsapp.com/send/?phone=6289522177567&text&type=phone_number&app_absent=0" class="icon whatsapp">
+                                              <div class="tooltip">Whatsapp</div>
+                                              <span><i class="fab fa-whatsapp" style="margin-left: 10px; size: 30px;"></i></span>
+                                            </a>
+                                            <a target="_blank" href="https://x.com/Jaehyunaii" class="icon twitter">
+                                              <div class="tooltip">Twitter</div>
+                                              <span><i class="fab fa-twitter" style="margin-left: 10px;"></i></span>
+                                            </a>
+                                            <a target="_blank" href="https://www.instagram.com/my_nameis_dio?igsh=MWl2aHlwM216OXp2Mg==" class="icon instagram">
+                                              <div class="tooltip">Instagram</div>
+                                              <span><i class="fab fa-instagram" style="margin-left: 10px;"></i></span>
+                                            </a>
+                                            <a target="_blank" href="https://github.com/DioAbiyyuZidaneGinting" class="icon github">
+                                              <div class="tooltip">Github</div>
+                                              <span><i class="fab fa-github" style="margin-left: 9px;"></i></span>
+                                            </a>
+                                            <a target="_blank" href="https://t.me/jenoxcl" class="icon telegram">
+                                              <div class="tooltip">Telegram</div>
+                                              <span><i class="fab fa-telegram" style="margin-left: 9px;"></i></span>
+                                            </a>
+                                            <a target="_blank" href="https://dio13abiyyu.blogspot.com/" class="icon blogger">
+                                              <div class="tooltip">Blogger</div>
+                                              <span><i class="fab fa-blogger-b" style="margin-left: 9px;"></i></span>
+                                            </a>
+                                          
+                                          </div>
+                            </div>
+                            <br><i class='bx bxs-envelope'></i> : dio13abiyyu@gmail.com
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-card">
+                    <h2 class="name">Akmal Eka Evandi</h2>
+                    <span class="npm">23451006</span>
+                    <a class="popup-btn">View Detail</a>
+                    <img src="image/akmalprofil.png" class="product-img" alt="">
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <a><i class="fas fa-times close-btn"></i></a>
+                        <div class="product-img">
+                            <img src="image/akmalprofil.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h2>Akmal Eka Evandi</h2>
+                            <h3>23451006 - Teknik Informatika (A) </h3><br><br>
+                            <p>"Life is like riding a bicycle.<br>To keep your balance, you must keep moving"</p><br>
+                            <div class="icon">
+                                
+
+
+                                        <div class="wrapper" style="width: 200px;">
+                                        
+                                           
+                                            <a target="_blank" href="https://www.instagram.com/akmalekaevandi?igsh=MTRkY240ZzgwYmM0bg==" class="icon instagram">
+                                              <div class="tooltip">Instagram</div>
+                                              <span><i class="fab fa-instagram" style="margin-left: 12.5px;"></i></span>
+                                            </a>
+                                            <a target="_blank" href="https://api.whatsapp.com/send/?phone=6283197891746&text&type=phone_number&app_absent=0" class="icon whatsapp">
+                                              <div class="tooltip">Instagram</div>
+                                              <span><i class="fab fa-whatsapp"  style="margin-left: 12.5px;"></i></span>
+                                            </a>
+                                        
+                                            <a target="_blank" href="https://t.me/akmalekaevandi" class="icon telegram">
+                                              <div class="tooltip">Telegram</div>
+                                              <span><i class="fab fa-telegram"  style="margin-left: 11px;"></i></span>
+                                            </a>
+                                           
+                                          
+                                          </div>
+
+                            </div>
+                            <br><i class='bx bxs-envelope'></i> : akmalekaevandi@gmail.com
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+    <!-- JavaScript for Toggle Menu -->
+    <script type="text/javascript">
+        var popupViews = document.querySelectorAll('.popup-view');
+        var popupBtns = document.querySelectorAll('.popup-btn');
+        var closeBtns = document.querySelectorAll('.close-btn');
+
+        var popup = function (popupClick) {
+            popupViews[popupClick].classList.add('active');
+        }
+
+        popupBtns.forEach((popupBtn, i) => {
+            popupBtn.addEventListener("click", () => {
+                popup(i);
+            });
+        });
+
+
+        closeBtns.forEach((closeBtn) => {
+            closeBtn.addEventListener("click", () => {
+                popupViews.forEach((popupView) => {
+                    popupView.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

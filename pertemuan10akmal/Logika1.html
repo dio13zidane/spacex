@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var nilai;
+        
+    nilai=77;
+    var nilai = parseInt(prompt("Masukkan Nilai:"));
+    
+    if (nilai>=80 && nilai <=100){
+        document.write(" A");
+    }
+    else if (nilai>=70 && nilai <=79){
+        document.write(" B");
+    }
+    else if (nilai>=60 && nilai<=69){
+        document.write(" C");
+    }
+    else if (nilai>=50 && nilai<=59){
+        document.write(" D");
+    }
+    else if (nilai>=40 && nilai <=49){
+        document.write(" E");
+    }
+    else if (nilai>=10 && nilai<=39){
+        document.write(" F");
+    }
+    
+    document.write("<p>Nilai Kamu: " + nilai + "</p>");
+    </script>
+</body>
+</html>

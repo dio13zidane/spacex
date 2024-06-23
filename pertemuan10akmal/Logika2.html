@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       var nama_barang = prompt("Masukkan nama barang: ");
+       document.write("<h2>Xion Market</h2>");
+       document.write("Nama Barang: " + nama_barang + "<br>");
+       
+       var harga_barang = parseFloat(prompt("Masukkan harga barang: "));
+       document.write("Harga Barang: " + harga_barang + "<br>");
+
+       var jumlah_barang = parseInt(prompt("Masukkan jumlah barang: "));
+       document.write("Jumlah Barang: " + jumlah_barang + "<br>");
+
+       // Hitung total harga tanpa diskon
+       var total_harga = harga_barang * jumlah_barang;
+       var diskon = 0;
+
+       // Hitung diskon jika jumlah barang >= 3
+       if (jumlah_barang >=3){
+          diskon = 0.3 * harga_barang *jumlah_barang;
+       }
+
+       // Total yang harus di bayar setelah di diskon
+       var total_bayar = total_harga - diskon;
+
+       document.write("Diskon: " + diskon + "<br>");
+       document.write("Total Bayar: " + total_bayar + "<br>" );
+    </script>
+</body>
+</html>

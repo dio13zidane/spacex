@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script type="text/javascript">
+     var nama_karyawan = "";
+     while (true){
+        nama_karyawan = prompt("Masukkan nama Karyawan:");
+        if (!isNaN(nama_karyawan)) {
+            alert("Nama Karyawan tidak boleh berupa angka dan karakter apapun!!. Silahkan masukkan kembali."); 
+        } else {
+          break;
+        }     
+    }
+     
+    var gaji_per_hari = 50000;
+    var jam_lembur = parseInt(prompt("Masukkan jumlah jam lembur: "));
+    var hari_kerja = parseInt(prompt("Masukkan jumlah hari kerja: "));
+    var jam_kerja = parseInt(prompt("Masukkan jumlah jam kerja: "));
+
+    // Perhitungan upah lembur 
+    var upah_lembur = 0;
+    if (jam_lembur >= 1 && jam_lembur <= 2){
+        upah_lembur = 25000 * jam_lembur;
+    }else if (jam_lembur >=3) {
+      upah_lembur = 35000 * jam_lembur;
+    }
+    
+    // Perhitungan bonus uang makan
+    var bonus_makan = jam_kerja >= 20 ? 5000 * hari_kerja : 0; 
+
+    // Hitung gaji total
+    var gaji_total = (gaji_per_hari * hari_kerja) + upah_lembur + bonus_makan;
+
+    document.write("<h2>Perhitungan Gaji</h2>");
+    document.write("Nama Karyawan: " + nama_karyawan + "<br>");
+    document.write("Gaji per hari: Rp. " + gaji_per_hari + "<br>");
+    document.write("Jam lembur: " + jam_lembur + "<br>" );
+    document.write("Jam kerja: " + jam_kerja + "<br>");
+    document.write("Hari Kerja: " + hari_kerja + "<br>");
+    document.write("Upah lembur: Rp. " + upah_lembur + "<br>");
+    document.write("Bonus uang makan: Rp. " + bonus_makan + "<br>");
+    document.write("<b>Gaji total: Rp. " + gaji_total + "</b>");
+    </script>
+</body>
+</html>

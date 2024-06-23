@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<link href="https://fonts.cdnfonts.com/css/college" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.cdnfonts.com/css/nasa" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<script>
+    function Assignments() {
+        var assignmentContent = document.getElementById("assignmentContent");
+        if (assignmentContent.style.display === "none") {
+            assignmentContent.style.display = "block";
+            document.body.style.overflow = "auto"; // Enable scrolling when task is visible
+        } else {
+            assignmentContent.style.display = "none";
+            document.body.style.overflow = "hidden"; // Disable scrolling when task is hidden
+        }
+    }
+</script>
+
+<script>
+    function Assignments2() {
+        var assignmentContent2 = document.getElementById("assignmentContent2");
+        if (assignmentContent2.style.display === "none") {
+            assignmentContent2.style.display = "block";
+        } else {
+            assignmentContent2.style.display = "none";
+        }
+    }
+</script>
+<head>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/college');
+
+        body {
+            margin: 0 auto;
+            padding: 0;
+            width: 350px;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling initially */
+        }
+        .box8 p{
+            font-family: 'Nasa', sans-serif;
+            font-size: 25px;
+            margin-top: 20px;
+            text-align: center;
+            color: #f0f0f0;
+            margin-bottom: -2px;
+            
+}
+
+        .button-aktif {
+            padding: 6px 1px;
+            margin-top: 30px;
+            font-size: 25px;
+            text-decoration: none;
+            font-family: 'College', sans-serif;
+            font-family: 'College Condensed', sans-serif;
+            font-family: 'College Semi-condensed', sans-serif;
+            height: 10px; /* Menyesuaikan dengan tinggi yang diinginkan */
+        }
+        
+        
+        .button-aktif2 {
+            padding: 6px 1px;
+            margin-top: -20px;
+            border-radius: px;
+            font-size: 25px;
+            text-decoration: none;
+            font-family: 'College', sans-serif;
+            font-family: 'College Condensed', sans-serif;
+            font-family: 'College Semi-condensed', sans-serif;
+                                                
+
+
+        }
+
+        .font {
+            color: rgb(18, 1, 1);
+            font-size: 24px;
+            margin-left: 5px;
+            transition: all .6s ease-in-out;
+
+            font-style: initial;
+        }
+
+
+        .classList {
+            margin-left: 60px;
+            margin-top: -30px;
+        }
+
+        .kelas {
+            margin-right: 30px;
+            padding-top: 10px;
+
+        }
+
+        .nama {
+            color: aliceblue;
+            margin-left: -25px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            font-size: 20px;
+            width: 180px;
+            background-color: #017e99;
+            box-sizing: border-box;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 5px;
+            padding-bottom: 3.5px;
+            padding-left: 15px;
+            padding-top: 4.2px;
+            font-style: unset;
+
+        }
+
+        .tugas {
+            color: rgb(242, 243, 244);
+            margin-left: 20px;
+            margin-top: -30px;
+            margin-right: 10px;
+            font-size: 25px;
+            width: 180px;
+            box-sizing: border-box;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 8px;
+            padding-bottom: 3.5px;
+            padding-left: 7px;
+            padding-top: 4.2px;
+            font-style: unset;
+        }
+
+        .links a {
+            text-decoration: none;
+        }
+
+        .tugas1 {
+            margin-left: 20px;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+
+        }
+
+        .nav-links ul li a {
+    color: #020202;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Audiowide", sans-serif;
+    padding: 8px 10px; /* Atur padding di sini */
+}
+
+       
+        .nav-links ul li a:hover {
+    color: #ff0000; /* Warna yang diinginkan saat cursor mendekat */
+}
+
+button p{
+    margin-top: -30px;
+}
+        
+
+        
+    </style>
+    <title>Menu</title>
+</head>
+
+<body bgcolor="#000">
+
+
+    <div class="kelas">
+        <section class="header">
+            <!-- header -->
+            <nav>
+
+                <div class="nav-links" id="navLinks">
+                    <p><a href="home.html" class="button-aktif" target="Konten"> <button class="btn"><p>Home<i class="w3-margin-left fa fa-home" style="margin-top: -10px;"></p></i></a></button></p>
+                    <p><a href="profil.html" class="button-aktif" target="Konten"> <button class="btn"><p>About<i class="w3-margin-left fa fa-male" style="margin-top: -10px;"></p></i></a></button></p>
+                    <p><a href="isi.html" class="button-aktif"  target="Konten"> <button class="btn"  onclick="Assignments()"><p>Task<i class="w3-margin-left fa fa-bars" style="margin-top: -10px;"></p></i></a></button></p>
+
+                
+
+                    
+                </div>
+                
+            </nav>
+
+           
+            <ul class="classList">
+
+                
+
+
+                <div id="assignmentContent" style="display: none;">
+
+                    <div class="box8">
+                        <a href="dioabiyyuzidaneginting.html"  target="Konten">
+                        <button class="button8">Dio Abiyyu Zidane Ginting<br>23451039</button>
+                        <div class="space">
+                          <span style="--i: 31" class="star"></span>
+                          <span style="--i: 12" class="star"></span>
+                          <span style="--i: 57" class="star"></span>
+                          <span style="--i: 93" class="star"></span>
+                          <span style="--i: 23" class="star"></span>
+                          <span style="--i: 70" class="star"></span>
+                          <span style="--i: 6" class="star"></span>
+                        </div>
+                        </a>
+                     </div>
+                     
+                    
+               
+                    
+                
+
+
+                    <div class="box8">
+                    
+                        <p>Pertemuan 1</p>
+                        <a href="file/Designweb1.pdf" target="Konten"><button class="button10"><span class="text"> Makalah Teori </span></button></a>  <BR>
+                        <a href="https://dio13zidane.github.io/pert1/websederhana1/" target="Konten"><button class="button10"><span class="text"> Profil Sederhana </span>  </button></a>
+                       <br>
+
+                        <p>Pertemuan 2</p>
+                        <a href="https://dio13zidane.github.io/pertemuan2ver1/format-text/" target="Konten"><button class="button10"><span class="text"> Web Format Text </span></button></a>  <BR>
+                        <a href="https://dio13zidane.github.io/Pertemuan2ver2/dioweb/" target="Konten"><button class="button10"><span class="text">Web Biodata Diri </span>  </button></a>
+                        <br>
+
+                        <p>Pertemuan 3</p>
+                        <a href="https://dio13zidane.github.io/pertemuan3dio/pertemuan3dio/" target="Konten"><button class="button10"><span class="text"> Web LatFrame </span></button></a>  <BR>
+                        <br>
+
+                        <p>Pertemuan 4</p>
+                        <a href="https://dio13zidane.github.io/pert4/Pertemuan%204/" target="Konten"><button class="button10"><span class="text"> Web Frameset </span></button></a>  <BR>
+                        
+
+                        <p>Pertemuan 5</p>
+                        <a href="https://dio13zidane.github.io/webkaputamadio/web_kaputama/" target="Konten"><button class="button10"><span class="text">Web Kaputama </span>  </button></a><BR>
+                        <a href="https://dio13zidane.github.io/pertemuan5dio1/pertemuan5(d1)/" target="Konten"><button class="button10"><span class="text"> Web Pendaftaran </span></button></a>  
+                        <br>
+
+                        <p>Pertemuan 7</p>
+                        <a href="pertemuan7dio.html" target="Konten"><button class="button10"><span class="text"> Web Pertemuan<br> 7  </span></button></a>  <BR>
+                        <br>
+
+                        <p >Pertemuan 10</p>
+                        <a href="P10dio.html" target="Konten"><button class="button10"><span class="text"> Web Pertemuan<br> 10  </span></button></a>  <BR>
+                        <br>
+
+                        <p>Pertemuan 12(PHP)</p>
+                            <a href="latihan1.php/latihan1.php" target="Konten"><button class="button10"><span class="text"> Konversi Nilai </button></a>  <BR>
+                            <a href="latihan2.php/index.php" target="Konten"><button class="button10"><span class="text"> Diskon Pembelian  </button></a>  <BR>
+                            <a href="latihan3.php/latihan3.php" target="Konten"><button class="button10"><span class="text"> Perhitungan Gaji</button></a>  <BR>
+                            <a href="latihan4.php/latihan4.php" target="Konten"><button class="button10"><span class="text"> Syarat Penerimaan<br>Pegawai  </span></button></a>  <BR>
+                            <a href="php/latihan5.php" target="Konten"><button class="button10"><span class="text"> Billing Online</button></a>  <BR>
+                            <a href="latihan6.php/" target="Konten"><button class="button10"><span class="text"> Game Zodiak</button></a>  <BR>
+                            <br>
+                            
+                        <p>Pertemuan 13(PHP)</p>
+                            <a href="Belajaraphp/formphp.php" target="Konten"><button class="button10"><span class="text">formphp </button></a>  <BR>
+                            <a href="Belajaraphp/hasil.php" target="Konten"><button class="button10"><span class="text"> hasil.php  </button></a>  <BR>
+                            <a href="Belajaraphp/if.php" target="Konten"><button class="button10"><span class="text"> if.php</button></a>  <BR>
+                            <a href="Belajaraphp/index.php" target="Konten"><button class="button10"><span class="text"> index.php</span></button></a>  <BR>
+                            <a href="Belajaraphp/lat1.php" target="Konten"><button class="button10"><span class="text"> lat1.php</button></a>  <BR>
+                            <a href="Belajaraphp/lat2.php" target="Konten"><button class="button10"><span class="text">lat2.php</button></a>  <BR>
+                            <a href="Belajaraphp/lat3.php" target="Konten"><button class="button10"><span class="text"> lat3.php</button></a>  <BR>
+                            <a href="Belajaraphp/lat4.php" target="Konten"><button class="button10"><span class="text"> lat4.php</button></a>  <BR>
+                            
+                            <br>
+                        <p>Pertemuan 14(PHP)</p>
+                            <a href="http://dioabiyyuzidane.rf.gd/" target="#"><button class="button10"><span class="text">Koneksi Database </button></a>  <BR>
+
+                            <br>
+                            
+                    </div>
+                
+
+                  
+
+<br><br>
+
+
+
+                    
+                        <div class="box8">
+                            <a href="akmalekaevandi.html"  target="Konten">
+                            <button class="button8" style="margin-left: 20px;">Akmal Eka Evandi<br>23451006</button>
+                            <div class="space">
+                              <span style="--i: 31" class="star"></span>
+                              <span style="--i: 12" class="star"></span>
+                              <span style="--i: 57" class="star"></span>
+                              <span style="--i: 93" class="star"></span>
+                              <span style="--i: 23" class="star"></span>
+                              <span style="--i: 70" class="star"></span>
+                              <span style="--i: 6" class="star"></span>
+                            </div>
+                            </a>
+                         </div>
+
+                         <div class="box8">
+                    
+                            <p>Pertemuan 1</p>
+                            <a href="file/MAKALAH_AKMAL[1].pdf" target="Konten"><button class="button10"><span class="text"> Makalah Teori </span></button></a>  <BR>
+                            <a href="https://dio13zidane.github.io/pertemuan1akmal/pertemuan1akmal/" target="Konten"><button class="button10"><span class="text"> Profil Sederhana </span>  </button></a>
+                           <br>
+    
+                            <p>Pertemuan 2</p>
+                            <a href="https://dio13zidane.github.io/praktek2akmal/praktek2akmal/" target="Konten"><button class="button10"><span class="text"> Web Format Text </span></button></a>  <BR>
+                            <a href="https://dio13zidane.github.io/akmalweb/1websederhana/" target="Konten"><button class="button10"><span class="text">Web Biodata Diri </span>  </button></a>
+                            <br>
+    
+                            <p>Pertemuan 3</p>
+                            <a href="https://dio13zidane.github.io/pertemuan3akmal/pertemuan3akmal/" target="Konten"><button class="button10"><span class="text"> Web LatFrame </span></button></a>  <BR>
+                            <br>
+    
+                            <p>Pertemuan 4</p>
+                            <a href="https://dio13zidane.github.io/pertemuan4akmal/pertemuan4akmal/" target="Konten"><button class="button10"><span class="text"> Web Frameset </span></button></a>  <BR>
+                            
+    
+                            <p>Pertemuan 5</p>
+                            <a href="https://dio13zidane.github.io/pertemuan5akmal1/pertemuan5akmal/" target="Konten"><button class="button10"><span class="text">Web Kaputama </span>  </button></a><BR>
+                            <a href="https://dio13zidane.github.io/webkaputamakmal/webkaputamaakmal/" target="Konten"><button class="button10"><span class="text"> Web Pendaftaran </span></button></a>  
+                            <br>
+    
+                            <p>Pertemuan 7</p>
+                            <a href="pertemuan7dio.html" target="Konten"><button class="button10"><span class="text"> Web Pertemuan<br> 7  </span></button></a>  <BR>
+                            <br>
+    
+                            <p>Pertemuan 10</p>
+                            <a href="P10dio.html" target="Konten"><button class="button10"><span class="text"> Web Pertemuan<br> 10  </span></button></a>  <BR>
+                            <br>
+                            <p>Pertemuan 10 (PHP)</p>
+                            <a href="P10dio.html" target="Konten"><button class="button10"><span class="text"> Web Pertemuan<br> 10  </span></button></a>  <BR>
+                            <br>
+
+                            <p>Pertemuan 12(PHP)</p>
+                            <a href="latihan1.php/latihan1.php" target="Konten"><button class="button10"><span class="text"> Konversi Nilai </button></a>  <BR>
+                            <a href="latihan2.php/index.php" target="Konten"><button class="button10"><span class="text"> Diskon Pembelian  </button></a>  <BR>
+                            <a href="latihan3.php/latihan3.php" target="Konten"><button class="button10"><span class="text"> Perhitungan Gaji</button></a>  <BR>
+                            <a href="latihan4.php/latihan4.php" target="Konten"><button class="button10"><span class="text"> Syarat Penerimaan<br>Pegawai  </span></button></a>  <BR>
+                            <a href="php/latihan5.php" target="Konten"><button class="button10"><span class="text"> Billing Online</button></a>  <BR>
+                            <a href="latihan6.php/" target="Konten"><button class="button10"><span class="text"> Game Zodiak</button></a>  <BR>
+                            <br>
+                            
+                        <p>Pertemuan 13(PHP)</p>
+                            <a href="Belajaraphp/formphp.php" target="Konten"><button class="button10"><span class="text">formphp </button></a>  <BR>
+                            <a href="Belajaraphp/hasil.php" target="Konten"><button class="button10"><span class="text"> hasil.php  </button></a>  <BR>
+                            <a href="Belajaraphp/if.php" target="Konten"><button class="button10"><span class="text"> if.php</button></a>  <BR>
+                            <a href="Belajaraphp/index.php" target="Konten"><button class="button10"><span class="text"> index.php</span></button></a>  <BR>
+                            <a href="Belajaraphp/lat1.php" target="Konten"><button class="button10"><span class="text"> lat1.php</button></a>  <BR>
+                            <a href="Belajaraphp/lat2.php" target="Konten"><button class="button10"><span class="text">lat2.php</button></a>  <BR>
+                            <a href="Belajaraphp/lat3.php" target="Konten"><button class="button10"><span class="text"> lat3.php</button></a>  <BR>
+                            <a href="Belajaraphp/lat4.php" target="Konten"><button class="button10"><span class="text"> lat4.php</button></a>  <BR>
+                            
+                            <br>
+                        <p>Pertemuan 14(PHP)</p>
+                            <a href="http://dioabiyyuzidane.rf.gd/" target="#"><button class="button10"><span class="text">Koneksi Database </button></a>  <BR>
+
+                            <br>
+                                
+                        </div>
+                    
+
+                    
+                   
+
+                    
+                    
+                    
+
+                    
+
+
+                  
+                    </div>
+               
+                </div>
+
+                
+            </ul>
+           
+    </div>
+    </div>
+</body>
+
+</html>
